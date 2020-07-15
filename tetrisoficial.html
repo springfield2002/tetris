@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Tetris the game </title>
+    <meta charset = "utf-8">
+    <link rel= "stylesheet" href = "tetris.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <audio src = "sound/gameover tetris.mp3" id="gameover">
+    </audio>
+    
+    <audio src = "sound/a soundtrack mais braba.mp3" id="soundtrack">
+    </audio>
+   
+    <audio  src = "sound/peça encaixando.mp3" id="peçaencaixando">
+    </audio>
+   
+    <audio src = "sound/peça mexendo.mp3" id="peçamexendo">
+    </audio>
+   
+    <audio src = "sound/quebra linha.mp3" id="quebralinha">
+    </audio>
+   
+   
+</head>
+
+<body>
+
+<canvas class ="screen" style ="margin-left: 345px"  id="tela" width="800" height="600"></canvas>
+<canvas class ="screen" style = "margin-top: -600px;margin-left: 40px"  id="stats"  width="300" height="600"></canvas>
+<canvas class ="screen" style = "margin-top: -600px;margin-left: 950px"  id="piece"  width="300" height="600"></canvas>
+<script>
+    
+
+var soundtrack = document.getElementById('soundtrack');
+var gameover = document.getElementById('gameover');
+var pecaencaix = document.getElementById('peçaencaixando')
+var pecamex = document.getElementById('peçamexendo')
+var quebralinha= document.getElementById('quebralinha')
+
+var tela = document.getElementById("tela");
+var c = tela.getContext("2d");
+var telastats = document.getElementById("stats")
+var c2 = telastats.getContext("2d");
+var telapeca = document.getElementById("piece")
+var c3 = telapeca.getContext("2d")
+var fimDeJogo;   
+</script> 
+<div class = "main" id ='main'>
+        <img src = "imgs/Tetris_2019.png">
+        <h1><span class = "meme">Meme</span> <span class = "version">Version</span> </h1>
+        <a id ="start" onclick="startGame()">LANSE A BRABA</a>
+</div>
+
+</body>
+<script src = "code.js"></script>
+<script>
+    function startGame(){
+        
+        tela.style.display = "block"; 
+        telastats.style.display = "block";
+        telapeca.style.display = "block";
+        var main = document.getElementById('main')
+        main.style.display = "none";
+        fimDeJogo = false;
+    }
+</script>
+
+    
+   
